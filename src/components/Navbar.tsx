@@ -17,7 +17,7 @@ const Navbar = () => {
        </div>
        <div className="flex flex-col">
         <span className="text-xs font-medium leading-3">Sameer</span>
-        <span className="text-gray-500 text-[18px] text-right">Admin</span>
+        <span className="text-gray-500 text-[10px] text-right">Admin</span>
        </div>
        <Image src='/avatar.png' height={36} width={36} alt="avatar" className="rounded-full" />
       </div>
