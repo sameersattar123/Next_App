@@ -1,11 +1,28 @@
-import React from 'react'
+import React from "react";
 
-const Table = () => {
+const Table = ({
+  columns,
+  renderRow,
+  data,
+}: {
+  columns: { header: string; accessor: string; className?: string }[];
+  renderRow: (item: any) => React.ReactNode;
+  data: any[];
+}) => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <table className="mt-4 w-full">
+      <thead>
+        <tr className="">
+          {columns.map(({ header, accessor, className }) => (
+            <th key={accessor} className={className}>
+              {header}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>{data.map((item) => renderRow(item))}</tbody>
+    </table>
+  );
+};
 
-export default Table
+export default Table;
