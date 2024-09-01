@@ -1,6 +1,6 @@
 import React from 'react'
 
-const table = () => {
+const Table = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const table = () => {
   )
 }
 
-export default table
+export default Table
